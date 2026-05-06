@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import { HiOutlineMail, HiOutlineLocationMarker, HiOutlineCheckCircle } from "react-icons/hi";
 import { FaPaperPlane } from "react-icons/fa6";
 
@@ -13,8 +14,6 @@ const Contact = () => {
     e.preventDefault();
     setStatus('sending');
 
-    // These should ideally be in .env.local
-    // For now, I'm using placeholders. The user needs to create an account at emailjs.com
     const SERVICE_ID = "service_2tewtto"; 
     const TEMPLATE_ID = "template_roqvuwm";
     const PUBLIC_KEY = "igrBxTpmLaWpvHkVT";
@@ -26,13 +25,16 @@ const Contact = () => {
       PUBLIC_KEY
     )
       .then((result) => {
-          console.log(result.text);
           setStatus('success');
+          toast.success('Message sent successfully! I will get back to you soon.', {
+            duration: 5000,
+            icon: '🚀',
+          });
           form.current.reset();
           setTimeout(() => setStatus('idle'), 5000);
       }, (error) => {
-          console.log(error.text);
           setStatus('error');
+          toast.error('Failed to send message. Please try again later.');
           setTimeout(() => setStatus('idle'), 5000);
       });
   };
@@ -198,30 +200,6 @@ const Contact = () => {
                 {/* Button Glow Effect */}
                 <div className="absolute inset-0 bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
               </button>
-
-              {/* Feedback Messages */}
-              <AnimatePresence>
-                {status === 'success' && (
-                  <motion.p 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    className="text-green-400 text-center text-sm font-medium"
-                  >
-                    Thank you! I'll get back to you shortly.
-                  </motion.p>
-                )}
-                {status === 'error' && (
-                  <motion.p 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    className="text-red-400 text-center text-sm font-medium"
-                  >
-                    Something went wrong. Please try again later.
-                  </motion.p>
-                )}
-              </AnimatePresence>
             </form>
           </motion.div>
         </div>
