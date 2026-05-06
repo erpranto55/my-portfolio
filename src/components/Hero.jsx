@@ -63,7 +63,7 @@ const Hero = () => {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 className="block"
               >
-                Hi, I'm <span className="gradient-text">Md Eyamin Rahman Pranto</span>
+                Hi, I'm <span className="gradient-text"> Pranto</span>
               </motion.span>
             </span>
 
@@ -122,7 +122,7 @@ const Hero = () => {
                 src={profilePic}
                 width={384}   // 96 * 4
                 height={384}  // 96 * 4
-                priority={true} 
+                priority={true}
               />
             </motion.div>
           </motion.div>
