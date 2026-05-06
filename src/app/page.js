@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import TechStack from "@/components/TechStack";
-import Skills from "@/components/Skills";
+import ProblemSolving from "@/components/ProblemSolving";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <TechStack />
-      <Skills />
+      <ProblemSolving />
       <Services />
       <Projects />
       <Contact />

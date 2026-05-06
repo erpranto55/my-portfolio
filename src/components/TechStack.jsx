@@ -45,7 +45,6 @@ const TechStack = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-pink mx-auto rounded-full"></div>
         </motion.div>
 
-
         {/* Technology Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {technologies.map((tech, index) => (

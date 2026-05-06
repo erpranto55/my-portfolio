@@ -52,8 +52,12 @@ const Navbar = () => {
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
               </a>
-              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#skills">
-                Skills
+              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#expertise">
+                Expertise
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
+              </a>
+              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#problem-solving">
+                Problem Solving
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
               </a>
               <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#projects">
