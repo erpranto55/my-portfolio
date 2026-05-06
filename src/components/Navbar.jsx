@@ -38,9 +38,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-xl font-bold tracking-tighter text-white">
-              PORTFOLIO<span className="text-neon-blue">.</span>
-            </span>
+            <span className="text-5xl font-bold tracking-tighter text-white">
+              E.R. <span className='text-neon-blue'>Pranto</span>
+            </span> 
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
