@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Magnetic from './Magnetic';
 
+import Link from 'next/link';
+
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -23,6 +25,15 @@ const Navbar = () => {
     }
   });
 
+  const navLinks = [
+    { name: "Home", href: "/#hero" },
+    { name: "About", href: "/#about" },
+    { name: "Expertise", href: "/#expertise" },
+    { name: "Problem Solving", href: "/#problem-solving" },
+    { name: "Projects", href: "/#projects" },
+    { name: "All Projects", href: "/projects" },
+  ];
+
   return (
     <motion.nav 
       variants={{
@@ -37,37 +48,27 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 flex items-center">
+          <Link href="/" className="flex-shrink-0 flex items-center">
             <span className="text-5xl font-bold tracking-tighter text-white">
               E.R. <span className='text-neon-blue'>Pranto</span>
             </span> 
-          </div>
+          </Link>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#hero">
-                Home
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
-              </a>
-              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#about">
-                About
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
-              </a>
-              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#expertise">
-                Expertise
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
-              </a>
-              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#problem-solving">
-                Problem Solving
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
-              </a>
-              <a className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group" href="#projects">
-                Projects
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
-              </a>
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name}
+                  className="hover:text-neon-blue px-3 py-2 text-sm font-medium transition-colors relative group text-gray-300" 
+                  href={link.href}
+                >
+                  {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all group-hover:w-full"></span>
+                </Link>
+              ))}
               <Magnetic>
-                <a className="px-4 py-2 rounded-full bg-gradient-to-r from-neon-blue to-blue-600 text-sm font-bold text-white hover:shadow-[0_0_20px_rgba(0,210,255,0.5)] transition-all inline-block" href="#contact">
+                <Link className="px-4 py-2 rounded-full bg-gradient-to-r from-neon-blue to-blue-600 text-sm font-bold text-white hover:shadow-[0_0_20px_rgba(0,210,255,0.5)] transition-all inline-block" href="/#contact">
                   Let's Talk
-                </a>
+                </Link>
               </Magnetic>
             </div>
           </div>
