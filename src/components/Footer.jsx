@@ -32,7 +32,7 @@ const Footer = () => {
 
     {
       icon: <FaXTwitter />,
-      href: "#",
+      href: "https://x.com/erpranto55",
     },
   ];
 

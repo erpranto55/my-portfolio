@@ -108,7 +108,7 @@ const About = () => {
               {[
                 { icon: <FaGithub />, href: "https://github.com/erpranto55" },
                 { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/erpranto55/" },
-                { icon: <FaXTwitter />, href: "#" }
+                { icon: <FaXTwitter />, href: "https://x.com/erpranto55" }
               ].map((social, i) => (
                 <Magnetic key={i}>
                   <a

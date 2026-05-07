@@ -1,9 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
-import {
-  SiC, SiCplusplus, SiHtml5, SiCss, SiJavascript,
+import { SiC, SiCplusplus, SiHtml5, SiCss, SiJavascript,
   SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs,
   SiMongodb, SiGit, SiFigma
 } from "react-icons/si";
