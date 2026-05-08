@@ -111,15 +111,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-center gap-4">
 
-          <p className="text-gray-500 text-sm text-center md:text-left">
+          <p className="text-gray-500 text-sm text-center items-center justify-center ">
             © {new Date().getFullYear()} Md Eyamin Rahman Pranto. All rights reserved.
           </p>
 
-          <p className="text-gray-600 text-sm">
-            Built with Next.js & Tailwind CSS
-          </p>
+
         </div>
       </div>
     </motion.footer>
