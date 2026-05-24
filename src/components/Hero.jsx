@@ -70,7 +70,7 @@ const Hero = () => {
 
       <motion.div style={{ y, opacity }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center z-10">
         <div data-purpose="hero-content">
-          <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block">Welcome to my world</span>
+          <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block">Available for Freelance & Full-Time Roles</span>
           <h1 className="hero-reveal text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
             <span className="block overflow-hidden">
               <motion.span
@@ -79,7 +79,7 @@ const Hero = () => {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 className="block"
               >
-                Hi, I'm <span className="gradient-text"> Pranto</span>
+                Hi, I&apos;m <span className="gradient-text"> Pranto</span>
               </motion.span>
             </span>
 
@@ -101,11 +101,11 @@ const Hero = () => {
             </div>
           </h1>
           <p className="hero-reveal text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
-            Passionate web developer and competitive programmer focused on building modern, high-performance digital experiences. I enjoy solving complex problems, creating clean user interfaces, and turning ideas into fast, scalable, and interactive web applications.
+            I build fast, polished web apps — from pixel-perfect UIs to scalable backends. With 500+ problems solved and 20+ shipped projects, I turn complex ideas into clean, working products.
           </p>
           <div className="hero-reveal flex flex-wrap gap-4 items-center">
             <Magnetic>
-              <a className="px-8 py-3 bg-gradient-to-r from-neon-blue to-blue-600 rounded-lg font-bold text-white hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all inline-block cursor-pointer" href="#contact">Contact Me</a>
+              <a className="px-8 py-3 bg-gradient-to-r from-neon-blue to-blue-600 rounded-lg font-bold text-white hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all inline-block cursor-pointer" href="#contact">Hire Me</a>
             </Magnetic>
             
             <div className="relative inline-flex items-center" ref={dropdownRef}>
@@ -250,4 +250,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

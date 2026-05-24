@@ -14,7 +14,7 @@ const Footer = () => {
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
+    { name: "Services", href: "#expertise" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
@@ -23,16 +23,19 @@ const Footer = () => {
     {
       icon: <FaLinkedin />,
       href: "https://www.linkedin.com/in/erpranto55/",
+      label: "LinkedIn Profile",
     },
 
     {
       icon: <FaGithub />,
       href: "https://github.com/erpranto55",
+      label: "GitHub Profile",
     },
 
     {
       icon: <FaXTwitter />,
       href: "https://x.com/erpranto55",
+      label: "Twitter / X Profile",
     },
   ];
 
@@ -102,6 +105,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 rounded-2xl bg-navy-card border border-gray-800 flex items-center justify-center text-gray-400 text-xl hover:text-neon-blue hover:border-neon-blue/40 hover:shadow-[0_0_20px_rgba(0,210,255,0.2)] transition-all duration-300"
+                  aria-label={social.label}
                 >
                   {social.icon}
                 </a>

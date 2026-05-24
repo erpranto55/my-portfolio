@@ -55,9 +55,9 @@ const About = () => {
           </span>
 
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-4">
-            Passionate About Building
+            A Developer Who Ships
             <span className="block gradient-text">
-              Modern Web Experiences
+              — and Competes
             </span>
           </h2>
 
@@ -106,9 +106,9 @@ const About = () => {
             {/* Socials */}
             <div className="flex gap-4 mb-8 z-10">
               {[
-                { icon: <FaGithub />, href: "https://github.com/erpranto55" },
-                { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/erpranto55/" },
-                { icon: <FaXTwitter />, href: "https://x.com/erpranto55" }
+                { icon: <FaGithub />, href: "https://github.com/erpranto55", label: "GitHub Profile" },
+                { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/erpranto55/", label: "LinkedIn Profile" },
+                { icon: <FaXTwitter />, href: "https://x.com/erpranto55", label: "Twitter / X Profile" }
               ].map((social, i) => (
                 <Magnetic key={i}>
                   <a
@@ -116,6 +116,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl border border-gray-700 flex items-center justify-center text-xl text-gray-400 hover:text-white hover:border-neon-blue transition-all duration-300"
                     href={social.href}
+                    aria-label={social.label}
                   >
                     {social.icon}
                   </a>
@@ -148,15 +149,15 @@ const About = () => {
 
               <div className="space-y-5 text-gray-400 leading-relaxed">
                 <p>
-                  I am a passionate web developer and competitive programmer focused on building modern digital experiences with performance, creativity, and scalability.
+                  I&apos;m Pranto — a full-stack developer from Dhaka, Bangladesh, who started with competitive programming and grew into building complete web products.
                 </p>
 
                 <p>
-                  My programming journey started with C programming and problem solving, which gradually evolved into full stack web development using modern technologies like React, Next.js, Tailwind CSS, Firebase, and animation libraries.
+                  My journey began with C and data structures, which gave me a strong foundation for writing efficient, scalable code.
                 </p>
 
                 <p>
-                  I enjoy solving complex problems, creating smooth user interfaces, and turning ideas into visually polished and high-performance web applications.
+                  Today I combine that problem-solving mindset with modern tools like React, Next.js, Firebase, and Node.js to ship polished, high-performance applications.
                 </p>
               </div>
             </motion.div>
@@ -166,7 +167,7 @@ const About = () => {
               <Counter value="20+" label="Projects" />
               <Counter value="500+" label="Problems Solved" />
               <Counter value="3+" label="Years Learning" />
-              <Counter value="24/7" label="Passion" />
+              <Counter value="Top 15%" label="on LeetCode" />
             </div>
 
           </div>

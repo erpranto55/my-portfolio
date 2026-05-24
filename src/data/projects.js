@@ -1,7 +1,7 @@
 export const projectsData = [
   {
     title: "Medique",
-    desc: "MediQueue is a full-stack tutor booking web application where students can register, log in, browse available tutors, and book online learning sessions by subject and availability. Features JWT authentication, digital session tokens, and a complete booking management system.",
+    desc: "MediQueue is a full-stack appointment and session booking platform where users can register, browse providers, and schedule sessions by subject and availability. Features JWT authentication, role-based access control, digital session tokens, and a complete booking management dashboard.",
     longDesc: "MediQueue is a comprehensive full-stack tutor booking platform built with Next.js on the frontend and Node.js/Express on the backend. Students can create accounts, browse a curated list of available tutors filtered by subject and time availability, and book online learning sessions with ease. The system generates unique digital session tokens for each confirmed booking, allowing both students and tutors to manage their scheduled classes efficiently. The backend features robust JWT-based authentication, secure API endpoints, MongoDB data persistence, and a clean RESTful architecture.",
     tags: ["Next.js", "Node.js", "MongoDB", "JWT Auth"],
     features: ["Student & tutor registration/login", "Browse tutors by subject & availability", "Session token generation per booking", "Booking management dashboard", "JWT authentication & authorization", "RESTful API backend"],
@@ -13,7 +13,7 @@ export const projectsData = [
   },
   {
     title: "Borrowly",
-    desc: "A comprehensive online platform for borrowing and managing books. Features user authentication, book cataloging, and an intuitive borrowing system with a focus on seamless user experience.",
+    desc: "A full-stack book borrowing platform built with Next.js and Firebase. Features real-time availability tracking, animated UI transitions via Framer Motion, user authentication, and an intuitive cataloging and borrowing management system.",
     longDesc: "Borrowly is a modern online book borrowing platform that reimagines the traditional library experience. Built with Next.js and Firebase, the platform allows users to register, browse an extensive book catalog, and borrow books with just a few clicks. The app features a fully functional authentication system, real-time data sync via Firebase Firestore, smooth page transitions powered by Framer Motion, and a polished, responsive UI built with Tailwind CSS.",
     tags: ["Next.js", "Firebase", "Tailwind CSS", "Framer Motion"],
     features: ["User authentication with Firebase", "Real-time book catalog", "Borrow & return management", "Smooth page transitions", "Responsive mobile design", "Firestore real-time database"],
@@ -25,7 +25,7 @@ export const projectsData = [
   },
   {
     title: "Dragon News",
-    desc: "A dynamic news portal platform featuring categorized news, breaking news alerts, right sidebar trending stories, user registration & authentication, and a modern responsive UI for a seamless reading experience.",
+    desc: "A production-style news portal handling multi-category feeds, live breaking alerts, and trending sidebar stories. Built with Next.js and Firebase auth — designed to mirror real-world news portal architecture with a fully responsive UI.",
     longDesc: "Dragon News is a full-featured news portal application built with Next.js and Firebase. The platform offers categorized news browsing, a live breaking news ticker, a right sidebar showcasing trending stories, and a robust user authentication system supporting registration and login. The UI is fully responsive, mobile-first, and designed for fast, intuitive content consumption. Recent updates include a polished right sidebar section and improved news card loading spinners.",
     tags: ["Next.js", "Firebase", "Tailwind CSS", "React.js"],
     features: ["Categorized news browsing", "Breaking news alerts ticker", "Trending right sidebar", "User registration & login", "Responsive mobile-first UI", "Loading spinners & smooth UX"],

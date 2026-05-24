@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Md Eyamin Rahman Pranto",
-  description: "Full Stack Developer & Competitive Programmer Portfolio",
+  description: "Md Eyamin Rahman Pranto — Full Stack Developer from Dhaka, Bangladesh. Building fast, scalable web apps with React, Next.js, and Node.js.",
 };
 
 export default function RootLayout({ children }) {
@@ -38,5 +38,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
 

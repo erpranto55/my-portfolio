@@ -67,7 +67,7 @@ const Navbar = () => {
               ))}
               <Magnetic>
                 <Link className="px-4 py-2 rounded-full bg-gradient-to-r from-neon-blue to-blue-600 text-sm font-bold text-white hover:shadow-[0_0_20px_rgba(0,210,255,0.5)] transition-all inline-block" href="/#contact">
-                  Let's Talk
+                  Let&apos;s Talk
                 </Link>
               </Magnetic>
             </div>
@@ -79,4 +79,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
