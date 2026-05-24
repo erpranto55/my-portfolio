@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" className={inter.variable}>
       <body className="antialiased selection:bg-neon-blue/30 overflow-x-hidden">
         <LenisProvider>
           <Toaster 

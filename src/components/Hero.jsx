@@ -19,7 +19,7 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center pt-16 overflow-hidden" id="hero">
+    <section ref={containerRef} className="relative min-h-screen flex items-center pt-16 overflow-x-hidden z-20" id="hero">
       {/* Background Accents */}
       <motion.div
         animate={{
