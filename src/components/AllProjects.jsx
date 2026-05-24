@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { projectsData, ProjectCard, ProjectModal } from './Projects';
+import { projectsData, projectCategories } from '@/data/projects';
+import { ProjectCard, ProjectModal } from './Projects';
 
 const AllProjects = () => {
   const [activeTab, setActiveTab]     = useState("All");
@@ -10,14 +11,9 @@ const AllProjects = () => {
   const openModal  = useCallback((project) => setActiveModal(project), []);
   const closeModal = useCallback(() => setActiveModal(null), []);
 
-  const categories = ["All", "Frontend", "Fullstack", "Full Stack"];
-
   const filteredProjects = activeTab === "All"
     ? projectsData
-    : projectsData.filter(p => {
-        const cat = p.category.replace(' ', '');
-        return cat.toLowerCase() === activeTab.replace(' ', '').toLowerCase();
-      });
+    : projectsData.filter((project) => project.category === activeTab);
 
   return (
     <>
@@ -44,7 +40,7 @@ const AllProjects = () => {
 
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-3 mt-8">
-              {["All", "Frontend", "Fullstack", "Full Stack"].map((cat) => (
+              {projectCategories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveTab(cat)}
