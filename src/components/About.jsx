@@ -57,7 +57,7 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-4">
             A Developer Who Ships
             <span className="block gradient-text">
-              — and Competes
+              and Competes
             </span>
           </h2>
 
@@ -75,7 +75,7 @@ const About = () => {
             className="bg-navy-card p-8 rounded-3xl border border-gray-800 flex flex-col items-center text-center relative overflow-hidden"
           >
 
-            <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/5 to-neon-pink/5"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-neon-blue/5 to-neon-pink/5"></div>
 
             {/* Image */}
             <motion.div
