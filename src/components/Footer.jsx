@@ -12,7 +12,7 @@ import {
 const Footer = () => {
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
+    { name: "Home", href: "https://erpranto.vercel.app/" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#expertise" },
     { name: "Projects", href: "#projects" },

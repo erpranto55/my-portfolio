@@ -26,7 +26,7 @@ const Navbar = () => {
   });
 
   const navLinks = [
-    { name: "Home", href: "/#hero" },
+    { name: "Home", href: "https://erpranto.vercel.app/" },
     { name: "About", href: "/#about" },
     { name: "Expertise", href: "/#expertise" },
     { name: "Problem Solving", href: "/#problem-solving" },
