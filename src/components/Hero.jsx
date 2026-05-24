@@ -69,7 +69,7 @@ const Hero = () => {
       ></motion.div>
 
       <motion.div style={{ y, opacity }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center z-10">
-        <div data-purpose="hero-content">
+        <div className="relative z-30" data-purpose="hero-content">
           <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block"><span className="text-green-400 mr-2">●</span>Available for Freelance & Collaboration</span>
           <h1 className="hero-reveal text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
             <span className="block overflow-hidden">
@@ -214,7 +214,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative flex justify-center" data-purpose="hero-image">
+        <div className="relative z-10 flex justify-center" data-purpose="hero-image">
           {/* The glowing ring container */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
