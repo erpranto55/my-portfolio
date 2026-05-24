@@ -1,14 +1,19 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import Magnetic from './Magnetic';
 import profilePic from "@/assets/ER_Pranto.jpg";
 import Image from 'next/image';
+import { FiDownload, FiChevronDown, FiEye, FiExternalLink } from 'react-icons/fi';
+import { toast } from 'react-hot-toast';
 
 const Hero = () => {
   const containerRef = useRef(null);
   const headingRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -16,6 +21,16 @@ const Hero = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -87,13 +102,112 @@ const Hero = () => {
           <p className="hero-reveal text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
             Passionate web developer and competitive programmer focused on building modern, high-performance digital experiences. I enjoy solving complex problems, creating clean user interfaces, and turning ideas into fast, scalable, and interactive web applications.
           </p>
-          <div className="hero-reveal flex flex-wrap gap-4">
+          <div className="hero-reveal flex flex-wrap gap-4 items-center">
             <Magnetic>
-              <a className="px-8 py-3 bg-gradient-to-r from-neon-blue to-blue-600 rounded-lg font-bold text-white hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all inline-block" href="#contact">Contact Me</a>
+              <a className="px-8 py-3 bg-gradient-to-r from-neon-blue to-blue-600 rounded-lg font-bold text-white hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all inline-block cursor-pointer" href="#contact">Contact Me</a>
             </Magnetic>
-            <Magnetic>
-              <a className="px-8 py-3 border border-gray-700 rounded-lg font-bold text-white hover:bg-gray-800 transition-colors inline-block" href="#">Download CV</a>
-            </Magnetic>
+            
+            <div className="relative inline-flex items-center" ref={dropdownRef}>
+              <Magnetic>
+                <div className="flex items-center">
+                  <a 
+                    href="/ER_Pranto_Resume.pdf" 
+                    download="ER_Pranto_Resume.pdf"
+                    onClick={() => {
+                      toast.success("Resume downloaded successfully! 🚀", {
+                        duration: 3000,
+                        icon: '⬇️',
+                      });
+                    }}
+                    className="px-6 py-3 border border-gray-700 border-r-0 rounded-l-lg font-bold text-white hover:bg-gray-800 hover:text-neon-blue hover:border-neon-blue/50 transition-all inline-flex items-center gap-2 cursor-pointer"
+                  >
+                    <FiDownload className="text-lg animate-bounce" />
+                    Download CV
+                  </a>
+                  <button 
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="px-3 py-[15px] border border-gray-700 rounded-r-lg font-bold text-white hover:bg-gray-800 hover:text-neon-blue hover:border-neon-blue/50 transition-all cursor-pointer inline-flex items-center"
+                    aria-label="View more download options"
+                  >
+                    <FiChevronDown className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-neon-blue' : ''}`} />
+                  </button>
+                </div>
+              </Magnetic>
+
+              {/* Sleek Floating Menu */}
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 15, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute left-0 top-full mt-3 w-72 bg-navy-dark/95 backdrop-blur-xl border border-gray-800 hover:border-neon-blue/30 rounded-xl p-2 shadow-[0_15px_40px_rgba(0,0,0,0.7)] z-50 overflow-hidden"
+                  >
+                    {/* Subtle background glow indicator */}
+                    <div className="absolute -top-10 -left-10 w-28 h-28 bg-neon-blue/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div className="space-y-1">
+                      {/* Option 1: Direct Download */}
+                      <a
+                        href="/ER_Pranto_Resume.pdf"
+                        download="ER_Pranto_Resume.pdf"
+                        onClick={() => {
+                          setIsDropdownOpen(false);
+                          toast.success("Resume downloaded successfully! 🚀", {
+                            duration: 3000,
+                            icon: '⬇️',
+                          });
+                        }}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-all group text-left cursor-pointer"
+                      >
+                        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-neon-blue/10 text-neon-blue group-hover:scale-110 transition-transform">
+                          <FiDownload className="text-base" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-white group-hover:text-neon-blue transition-colors">Direct PDF Download</div>
+                          <div className="text-[11px] text-gray-500">Download instantly (Fast Server)</div>
+                        </div>
+                      </a>
+
+                      {/* Option 2: Open in browser */}
+                      <a
+                        href="/ER_Pranto_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-all group text-left cursor-pointer"
+                      >
+                        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-neon-pink/10 text-neon-pink group-hover:scale-110 transition-transform">
+                          <FiEye className="text-base" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-white group-hover:text-neon-pink transition-colors">Open in Browser</div>
+                          <div className="text-[11px] text-gray-500">Read PDF in a new browser tab</div>
+                        </div>
+                      </a>
+
+                      {/* Option 3: Google Drive View */}
+                      <a
+                        href="https://drive.google.com/file/d/1iPLwmepfv1GdrQxj7lcsOZZAvIlRDBpl/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-all group text-left cursor-pointer"
+                      >
+                        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-neon-orange/10 text-neon-orange group-hover:scale-110 transition-transform">
+                          <FiExternalLink className="text-base" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-white group-hover:text-neon-orange transition-colors">Google Drive Link</div>
+                          <div className="text-[11px] text-gray-500">View or save to Google Drive</div>
+                        </div>
+                      </a>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
 
