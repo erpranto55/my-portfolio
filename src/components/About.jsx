@@ -34,7 +34,7 @@ const Counter = ({ value, label }) => {
 
 const About = () => {
   return (
-    <section className="py-24 bg-navy-dark relative overflow-hidden" id="about">
+    <section className="py-24 bg-navy-dark relative overflow-hidden z-10" id="about">
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-neon-blue/10 blur-[120px] rounded-full"></div>

@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
@@ -48,7 +49,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center pt-16 overflow-x-hidden z-20" id="hero">
+    <section ref={containerRef} className="relative min-h-screen flex items-center pt-16 z-20" id="hero">
       {/* Background Accents */}
       <motion.div
         animate={{
@@ -113,6 +114,8 @@ const Hero = () => {
                   <a 
                     href="/ER_Pranto_Resume.pdf" 
                     download="ER_Pranto_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => {
                       toast.success("Resume downloaded successfully! 🚀", {
                         duration: 3000,
@@ -142,7 +145,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 15, scale: 0.95 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute left-0 top-full mt-3 w-72 bg-navy-dark/95 backdrop-blur-xl border border-gray-800 hover:border-neon-blue/30 rounded-xl p-2 shadow-[0_15px_40px_rgba(0,0,0,0.7)] z-50 overflow-hidden"
+                    className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-3 w-72 bg-navy-dark/95 backdrop-blur-xl border border-gray-800 hover:border-neon-blue/30 rounded-xl p-2 shadow-[0_15px_40px_rgba(0,0,0,0.7)] z-50 overflow-hidden"
                   >
                     {/* Subtle background glow indicator */}
                     <div className="absolute -top-10 -left-10 w-28 h-28 bg-neon-blue/10 rounded-full blur-2xl pointer-events-none"></div>
