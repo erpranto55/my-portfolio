@@ -26,6 +26,7 @@ import {
   SiGithub,
   SiFigma,
 } from "react-icons/si";
+import { FiLayout } from "react-icons/fi";
 import { KeyRound } from "lucide-react";
 
 const TechStack = () => {
@@ -46,7 +47,7 @@ const TechStack = () => {
     },
     {
       title: "Frontend Development",
-      summary: "Modern responsive interfaces with React, Next.js, TypeScript, and Tailwind CSS.",
+      summary: "Modern, responsive interfaces with React, Next.js, TypeScript, Tailwind CSS, and smooth animations via Framer Motion and GSAP.",
       accent: "from-neon-pink to-fuchsia-600",
       technologies: [
         { name: "HTML5", color: "from-orange-600 to-orange-400", icon: <SiHtml5 /> },
@@ -58,6 +59,7 @@ const TechStack = () => {
         { name: "Tailwind", color: "from-cyan-400 to-sky-500", icon: <SiTailwindcss /> },
         { name: "HeroUI", color: "from-violet-500 to-fuchsia-500", icon: <SiHeroui /> },
         { name: "Figma", color: "from-purple-500 via-pink-500 to-orange-500", icon: <SiFigma /> },
+        { name: "Daily UI", color: "from-pink-500 to-orange-400", icon: <FiLayout /> },
       ],
     },
     {
@@ -94,7 +96,7 @@ const TechStack = () => {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            Languages and Tools:
+            My Tech Stack
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-pink mx-auto rounded-full"></div>
         </motion.div>

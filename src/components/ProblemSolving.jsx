@@ -56,7 +56,7 @@ const ProblemSolving = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-pink to-neon-orange mx-auto rounded-full"></div>
           <p className="text-gray-400 mt-8 max-w-2xl mx-auto text-lg leading-relaxed">
-            Passionately solving algorithmic challenges and optimizing performance across top competitive platforms.
+            Solving algorithmic challenges and optimizing performance across top competitive platforms.
           </p>
         </motion.div>
 

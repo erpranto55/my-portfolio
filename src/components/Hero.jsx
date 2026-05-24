@@ -70,7 +70,7 @@ const Hero = () => {
 
       <motion.div style={{ y, opacity }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center z-10">
         <div data-purpose="hero-content">
-          <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block">Available for Freelance & Full-Time Roles</span>
+          <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block"><span className="text-green-400 mr-2">●</span>Available for Freelance & Collaboration</span>
           <h1 className="hero-reveal text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
             <span className="block overflow-hidden">
               <motion.span
@@ -101,7 +101,7 @@ const Hero = () => {
             </div>
           </h1>
           <p className="hero-reveal text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
-            I build fast, polished web apps — from pixel-perfect UIs to scalable backends. With 500+ problems solved and 20+ shipped projects, I turn complex ideas into clean, working products.
+            I build fast, scalable web apps and love cracking hard algorithmic problems. From pixel-perfect UIs to robust backends — I ship things that work.
           </p>
           <div className="hero-reveal flex flex-wrap gap-4 items-center">
             <Magnetic>

@@ -100,7 +100,7 @@ const About = () => {
             </p>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-8 z-10">
-              Passionate about creating modern, scalable, and interactive web applications with clean UI, smooth animations, and high performance user experiences.
+              I write clean code, sweat the details, and build digital products people actually enjoy using.
             </p>
 
             {/* Socials */}
@@ -149,15 +149,15 @@ const About = () => {
 
               <div className="space-y-5 text-gray-400 leading-relaxed">
                 <p>
-                  I&apos;m Pranto — a full-stack developer from Dhaka, Bangladesh, who started with competitive programming and grew into building complete web products.
+                  My programming journey started with C and competitive problem solving — building the logical foundation that now drives everything I create.
                 </p>
 
                 <p>
-                  My journey began with C and data structures, which gave me a strong foundation for writing efficient, scalable code.
+                  That foundation evolved into full stack web development using React, Next.js, Tailwind CSS, Firebase, and animation libraries like GSAP and Framer Motion.
                 </p>
 
                 <p>
-                  Today I combine that problem-solving mindset with modern tools like React, Next.js, Firebase, and Node.js to ship polished, high-performance applications.
+                  I care about performance, clean architecture, and user experience. Every project I build is something I&apos;d be proud to put my name on.
                 </p>
               </div>
             </motion.div>
@@ -165,7 +165,7 @@ const About = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <Counter value="20+" label="Projects" />
-              <Counter value="500+" label="Problems Solved" />
+              <Counter value="350+" label="Problems Solved" />
               <Counter value="3+" label="Years Learning" />
               <Counter value="Top 15%" label="on LeetCode" />
             </div>

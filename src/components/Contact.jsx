@@ -53,9 +53,9 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <span className="text-neon-blue uppercase tracking-[0.3em] text-sm font-bold block mb-4">Get In Touch</span>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Let&apos;s Build Something Together</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Got a Project? Let&apos;s Build It.</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Have a project idea or collaboration in mind? Feel free to reach out and let&apos;s create something extraordinary.
+            Whether you need a full stack web app built from scratch or want a competitive programmer on your team — I&apos;d love to hear from you. I typically respond within 24 hours.
           </p>
         </motion.div>
         
@@ -71,8 +71,7 @@ const Contact = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">Contact Information</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                I&apos;m passionate about building modern web applications and solving real-world problems. 
-                Whether you have a project idea or just want to connect — I typically respond within 24 hours. Let&apos;s talk.
+                I&apos;m always open to interesting projects, freelance work, or just a good tech conversation. Drop me a message and let&apos;s see what we can build together.
               </p>
             </div>
 

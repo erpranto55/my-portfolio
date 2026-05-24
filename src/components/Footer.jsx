@@ -74,9 +74,7 @@ const Footer = () => {
 
           {/* Description */}
           <p className="max-w-2xl text-gray-400 leading-relaxed mb-10">
-            Passionate about building modern, scalable, and high-performance
-            web applications with clean design, smooth animations, and seamless
-            user experiences.
+            Building things for the web. Open to freelance, full-time, and interesting problems.
           </p>
 
           {/* Navigation */}
