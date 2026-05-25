@@ -57,7 +57,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-navy-dark relative overflow-hidden" id="expertise">
+    <section className="py-16 md:py-20 bg-navy-dark relative overflow-hidden" id="expertise">
       {/* Background Decorative Glows */}
       <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-neon-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-neon-pink/5 blur-[120px] rounded-full pointer-events-none"></div>

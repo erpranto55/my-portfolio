@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 bg-navy-dark relative overflow-hidden" id="contact">
+    <section className="py-16 md:py-20 bg-navy-dark relative overflow-hidden" id="contact">
       {/* Background Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-blue/5 blur-[150px] rounded-full pointer-events-none"></div>
 
@@ -55,7 +55,7 @@ const Contact = () => {
           <span className="text-neon-blue uppercase tracking-[0.3em] text-sm font-bold block mb-4">Get In Touch</span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Got a Project? Let&apos;s Build It.</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Whether you need a full stack web app built from scratch or want a competitive programmer on your team — I&apos;d love to hear from you. I typically respond within 24 hours.
+            Have a project to build or a problem to solve? I respond within 24 hours — let&apos;s talk.
           </p>
         </motion.div>
         
@@ -71,7 +71,7 @@ const Contact = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">Contact Information</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                I&apos;m always open to interesting projects, freelance work, or just a good tech conversation. Drop me a message and let&apos;s see what we can build together.
+                I&apos;m open to freelance projects, full-time opportunities, and collaborative builds. Whether you have a spec ready or just an idea — reach out and we&apos;ll figure out the rest.
               </p>
             </div>
 

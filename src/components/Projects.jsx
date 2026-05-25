@@ -281,7 +281,7 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
-      <section className="py-24 bg-navy-dark relative overflow-hidden" id="projects">
+      <section className="py-16 md:py-20 bg-navy-dark relative overflow-hidden" id="projects">
         {/* Background Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neon-blue/5 blur-[150px] rounded-full pointer-events-none" />
 

@@ -34,7 +34,7 @@ const Counter = ({ value, label }) => {
 
 const About = () => {
   return (
-    <section className="py-24 bg-navy-dark relative overflow-hidden z-10" id="about">
+    <section className="py-16 md:py-20 bg-navy-dark relative overflow-hidden z-10" id="about">
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-neon-blue/10 blur-[120px] rounded-full"></div>
@@ -55,9 +55,9 @@ const About = () => {
           </span>
 
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-4">
-            A Developer Who Ships
+            From Algorithms
             <span className="block gradient-text">
-              and Competes
+              to Applications
             </span>
           </h2>
 
@@ -100,7 +100,7 @@ const About = () => {
             </p>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-8 z-10">
-              I write clean code, sweat the details, and build digital products people actually enjoy using.
+              Algorithmic thinker. Full-stack builder. I approach every system the same way I'd approach a contest problem — with efficiency and clarity as the baseline.
             </p>
 
             {/* Socials */}
@@ -149,15 +149,15 @@ const About = () => {
 
               <div className="space-y-5 text-gray-400 leading-relaxed">
                 <p>
-                  My programming journey started with C and competitive problem solving — building the logical foundation that now drives everything I create.
+                  My journey started with competitive programming — debugging C/C++ at 2 AM, optimizing time complexity, and placing in rated contests. That algorithmic foundation now drives how I architect web applications: every system gets the same scrutiny I'd give a runtime constraint.
                 </p>
 
                 <p>
-                  That foundation evolved into full stack web development using React, Next.js, Tailwind CSS, Firebase, and animation libraries like GSAP and Framer Motion.
+                  Today I build full-stack products with React, Next.js, and Node.js — from database schema to deployed UI. I still compete on Codeforces, LeetCode, and CodeChef, and I've collaborated in team contests as part of Infinity Loopers.
                 </p>
 
                 <p>
-                  I care about performance, clean architecture, and user experience. Every project I build is something I&apos;d be proud to put my name on.
+                  If you need someone who can design a clean interface AND reason about the algorithm underneath it — let's talk.
                 </p>
               </div>
             </motion.div>
@@ -166,8 +166,8 @@ const About = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <Counter value="20+" label="Projects" />
               <Counter value="350+" label="Problems Solved" />
-              <Counter value="3+" label="Years Learning" />
-              <Counter value="Top 15%" label="on LeetCode" />
+              <Counter value="3+" label="Years Building" />
+              <Counter value="Top 10%" label="LeetCode" />
             </div>
 
           </div>

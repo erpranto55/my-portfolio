@@ -1,10 +1,10 @@
 export const projectsData = [
   {
     title: "Medique",
-    desc: "Medique is a full-stack appointment and session booking platform. Users can register, browse available slots, and manage bookings end-to-end. Built with JWT authentication, digital session tokens, and a complete booking management dashboard.",
-    longDesc: "Medique is a comprehensive full-stack appointment and session booking platform built with Next.js on the frontend and Node.js/Express on the backend. Users can create accounts, browse available slots, and manage bookings end-to-end with ease. The system generates unique digital session tokens for each confirmed booking, allowing users and providers to manage their scheduled sessions efficiently. The backend features robust JWT-based authentication, secure API endpoints, MongoDB data persistence, and a clean RESTful architecture.",
+    desc: "Medique is a full-stack doctor appointment and queue management platform where patients can register, browse available physicians, and book consultations by specialty and time slot. Features JWT authentication, digital session tokens, and a complete appointment management dashboard.",
+    longDesc: "Medique is a comprehensive full-stack doctor appointment and queue management platform built with Next.js on the frontend and Node.js/Express on the backend. Patients can register, browse available physicians, and book consultations by specialty and time slot. The system generates unique digital session tokens for each confirmed booking, allowing patients and providers to manage scheduled sessions efficiently. The backend features robust JWT-based authentication, secure API endpoints, MongoDB data persistence, and a clean RESTful architecture.",
     tags: ["Next.js", "Node.js", "MongoDB", "JWT Auth"],
-    features: ["Student & tutor registration/login", "Browse tutors by subject & availability", "Session token generation per booking", "Booking management dashboard", "JWT authentication & authorization", "RESTful API backend"],
+    features: ["Patient & doctor registration/login", "Browse physicians by specialty & availability", "Session token generation per booking", "Appointment queue management dashboard", "JWT authentication & authorization", "RESTful API backend"],
     image: "/medique.png",
     live: "https://medique-ashy.vercel.app",
     code: "https://github.com/erpranto55/Medique",

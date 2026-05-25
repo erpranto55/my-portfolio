@@ -49,7 +49,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center pt-16 z-20" id="hero">
+    <section ref={containerRef} className="relative min-h-screen flex items-center pt-16 z-20 overflow-hidden" id="hero">
       {/* Background Accents */}
       <motion.div
         animate={{
@@ -70,8 +70,8 @@ const Hero = () => {
 
       <motion.div style={{ y, opacity }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center z-10">
         <div className="relative z-30" data-purpose="hero-content">
-          <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block"><span className="text-green-400 mr-2">●</span>Available for Freelance & Collaboration</span>
-          <h1 className="hero-reveal text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+          <span className="hero-reveal text-neon-pink font-semibold tracking-widest uppercase text-sm mb-4 block"><span className="text-green-400 mr-2">●</span>Building things that work.</span>
+          <h1 className="hero-reveal text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
             <span className="block overflow-hidden">
               <motion.span
                 initial={{ y: 120, opacity: 0 }}
@@ -83,7 +83,7 @@ const Hero = () => {
               </motion.span>
             </span>
 
-            <div className="mt-4 h-[90px] md:h-[110px] overflow-hidden">
+            <div className="mt-4 h-[50px] sm:h-[65px] md:h-[90px] lg:h-[110px] overflow-hidden text-3xl sm:text-5xl md:text-7xl">
               <motion.div
                 initial={{ y: 0 }}
                 animate={{ y: ["0%", "-33.33%", "-66.66%", "0%"] }}
@@ -94,48 +94,46 @@ const Hero = () => {
                 }}
                 className="flex flex-col"
               >
-                <span className="block">Web Developer</span>
-                <span className="block">Problem Solver</span>
-                <span className="block">Competitive Programmer</span>
+                <span className="block whitespace-nowrap">Web Developer</span>
+                <span className="block whitespace-nowrap">Problem Solver</span>
+                <span className="block whitespace-nowrap">Competitive Programmer</span>
               </motion.div>
             </div>
           </h1>
           <p className="hero-reveal text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
-            I build fast, scalable web apps and love cracking hard algorithmic problems. From pixel-perfect UIs to robust backends — I ship things that work.
+            I build fast, production-ready web applications and compete at the algorithmic edge. Whether it's a clean UI or a hard DSA problem — I ship solutions that are efficient by design.
           </p>
-          <div className="hero-reveal flex flex-wrap gap-4 items-center">
+          <div className="hero-reveal flex flex-col sm:flex-row gap-4 items-stretch sm:items-center w-full sm:max-w-md">
             <Magnetic>
-              <a className="px-8 py-3 bg-gradient-to-r from-neon-blue to-blue-600 rounded-lg font-bold text-white hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all inline-block cursor-pointer" href="#contact">Hire Me</a>
+              <a className="h-12 px-8 bg-gradient-to-r from-neon-blue to-blue-600 rounded-xl font-bold text-white hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all flex items-center justify-center cursor-pointer text-sm tracking-wide shadow-lg" href="#contact">Hire Me</a>
             </Magnetic>
             
-            <div className="relative inline-flex items-center" ref={dropdownRef}>
-              <Magnetic>
-                <div className="flex items-center">
-                  <a 
-                    href="/ER_Pranto_Resume.pdf" 
-                    download="ER_Pranto_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => {
-                      toast.success("Resume downloaded successfully! 🚀", {
-                        duration: 3000,
-                        icon: '⬇️',
-                      });
-                    }}
-                    className="px-6 py-3 border border-gray-700 border-r-0 rounded-l-lg font-bold text-white hover:bg-gray-800 hover:text-neon-blue hover:border-neon-blue/50 transition-all inline-flex items-center gap-2 cursor-pointer"
-                  >
-                    <FiDownload className="text-lg animate-bounce" />
-                    Download CV
-                  </a>
-                  <button 
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="px-3 py-[15px] border border-gray-700 rounded-r-lg font-bold text-white hover:bg-gray-800 hover:text-neon-blue hover:border-neon-blue/50 transition-all cursor-pointer inline-flex items-center"
-                    aria-label="View more download options"
-                  >
-                    <FiChevronDown className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-neon-blue' : ''}`} />
-                  </button>
-                </div>
-              </Magnetic>
+            <div className="relative flex items-center w-full sm:w-auto" ref={dropdownRef}>
+              <div className="flex items-center w-full">
+                <a 
+                  href="/ER_Pranto_Resume.pdf" 
+                  download="ER_Pranto_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    toast.success("Resume downloaded successfully! 🚀", {
+                      duration: 3000,
+                      icon: '⬇️',
+                    });
+                  }}
+                  className="flex-grow sm:flex-grow-0 h-12 px-6 border border-gray-700 border-r-0 rounded-l-xl font-bold text-white hover:bg-gray-800 hover:text-neon-blue hover:border-neon-blue/50 transition-all flex items-center justify-center gap-2 cursor-pointer text-sm tracking-wide"
+                >
+                  <FiDownload className="text-lg animate-bounce" />
+                  Download CV
+                </a>
+                <button 
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="h-12 px-4 border border-gray-700 rounded-r-xl font-bold text-white hover:bg-gray-800 hover:text-neon-blue hover:border-neon-blue/50 transition-all cursor-pointer flex items-center justify-center"
+                  aria-label="View more download options"
+                >
+                  <FiChevronDown className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-neon-blue' : ''}`} />
+                </button>
+              </div>
 
               {/* Sleek Floating Menu */}
               <AnimatePresence>

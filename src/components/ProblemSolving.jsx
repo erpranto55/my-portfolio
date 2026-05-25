@@ -36,7 +36,7 @@ const ProblemSolving = () => {
   ];
 
   return (
-    <section className="py-24 bg-navy-dark relative overflow-hidden" id="problem-solving">
+    <section className="py-16 md:py-20 bg-navy-dark relative overflow-hidden" id="problem-solving">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -94,9 +94,15 @@ const ProblemSolving = () => {
                 <div className="space-y-3 pt-4 border-t border-gray-800/50">
                   <div className="flex items-center gap-3">
                     <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${platform.color}`}></div>
-                    <span className="text-white font-bold text-lg">{platform.stats}</span>
+                    {platform.name === "Codeforces" ? (
+                      <span className="border border-[#6495ED]/40 px-2.5 py-0.5 rounded-full bg-[#6495ED]/5 text-white font-bold text-lg inline-flex items-center">
+                        <span style={{ color: "#6495ED" }}>{platform.stats}</span>
+                      </span>
+                    ) : (
+                      <span className="text-white font-bold text-lg">{platform.stats}</span>
+                    )}
                   </div>
-                  <p className="text-gray-500 text-sm font-medium pl-5">{platform.rank}</p>
+                  <p className={`font-medium pl-5 ${platform.name === "Codeforces" ? "text-gray-300 text-base font-bold" : "text-gray-500 text-sm"}`}>{platform.rank}</p>
                 </div>
               </div>
 
@@ -105,6 +111,23 @@ const ProblemSolving = () => {
             </motion.a>
           ))}
         </div>
+
+        {/* Infinity Loopers Team Achievement Badge */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-8 border border-dashed border-blue-500/40 rounded-2xl p-6 flex items-start gap-4 bg-blue-500/5 hover:border-blue-500/60 transition-all duration-300"
+        >
+          <div className="text-3xl">🏆</div>
+          <div>
+            <p className="font-bold text-white text-base">Infinity Loopers — Competitive Programming Team</p>
+            <p className="text-sm text-gray-400 mt-2 leading-relaxed">
+              Collaborated as part of Infinity Loopers in team-based algorithmic contests, including ICPC-style regional competitions. Practiced collaborative problem decomposition and contest-time optimization under pressure.
+            </p>
+          </div>
+        </motion.div>
 
       </div>
     </section>

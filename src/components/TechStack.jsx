@@ -81,7 +81,7 @@ const TechStack = () => {
   ];
 
   return (
-    <section className="py-20 bg-navy-dark text-center relative overflow-hidden" id="tech-stack">
+    <section className="py-16 md:py-20 bg-navy-dark text-center relative overflow-hidden" id="tech-stack">
       {/* Subtle Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(0,210,255,0.08),transparent_50%)] pointer-events-none"></div>
 
@@ -159,7 +159,7 @@ const TechStack = () => {
       </div>
 
       {/* Decorative Transition */}
-      <div className="mt-24 w-full h-px bg-gradient-to-r from-transparent via-gray-800/50 to-transparent"></div>
+      <div className="mt-14 md:mt-16 w-full h-px bg-gradient-to-r from-transparent via-gray-800/50 to-transparent"></div>
     </section>
   );
 };

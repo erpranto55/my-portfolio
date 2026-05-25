@@ -14,7 +14,7 @@ const Footer = () => {
   const navLinks = [
     { name: "Home", href: "https://erpranto.vercel.app/" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#expertise" },
+    { name: "Expertise", href: "#expertise" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
@@ -74,7 +74,7 @@ const Footer = () => {
 
           {/* Description */}
           <p className="max-w-2xl text-gray-400 leading-relaxed mb-10">
-            Building things for the web. Open to freelance, full-time, and interesting problems.
+            Full-stack developer. Competitive programmer. Available for opportunities.
           </p>
 
           {/* Navigation */}
