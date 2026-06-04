@@ -151,15 +151,38 @@ export const ProjectModal = ({ project, onClose }) => {
                 <FiExternalLink className="text-lg" />
                 Live Preview
               </a>
-              <a
-                href={project.code}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 px-8 py-3.5 bg-gray-900 border border-gray-700 hover:border-gray-500 rounded-xl font-bold text-white text-sm hover:bg-gray-800 hover:scale-105 active:scale-95 transition-all duration-200"
-              >
-                <FaGithub className="text-lg" />
-                View Code
-              </a>
+              {project.serverCode ? (
+                <>
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 px-8 py-3.5 bg-gray-900 border border-gray-700 hover:border-gray-500 rounded-xl font-bold text-white text-sm hover:bg-gray-800 hover:scale-105 active:scale-95 transition-all duration-200"
+                  >
+                    <FaGithub className="text-lg" />
+                    Client Code
+                  </a>
+                  <a
+                    href={project.serverCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 px-8 py-3.5 bg-gray-900 border border-gray-700 hover:border-gray-500 rounded-xl font-bold text-white text-sm hover:bg-gray-800 hover:scale-105 active:scale-95 transition-all duration-200"
+                  >
+                    <FaGithub className="text-lg" />
+                    Server Code
+                  </a>
+                </>
+              ) : (
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2.5 px-8 py-3.5 bg-gray-900 border border-gray-700 hover:border-gray-500 rounded-xl font-bold text-white text-sm hover:bg-gray-800 hover:scale-105 active:scale-95 transition-all duration-200"
+                >
+                  <FaGithub className="text-lg" />
+                  View Code
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -248,15 +271,41 @@ export const ProjectCard = ({ project, index, onOpenModal }) => {
               <span>Live</span>
               <HiOutlineExternalLink className="text-lg group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
             </a>
-            <a
-              href={project.code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-gray-500 hover:text-white text-sm font-medium transition-colors group/link"
-            >
-              <span>Code</span>
-              <FaGithub className="text-lg group-hover/link:rotate-12 transition-transform" />
-            </a>
+            {project.serverCode ? (
+              <span className="flex items-center gap-3">
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-gray-500 hover:text-white text-sm font-medium transition-colors group/link"
+                  title="Client Code"
+                >
+                  <span>Client</span>
+                  <FaGithub className="text-lg group-hover/link:rotate-12 transition-transform" />
+                </a>
+                <span className="text-gray-700">|</span>
+                <a
+                  href={project.serverCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-gray-500 hover:text-white text-sm font-medium transition-colors group/link"
+                  title="Server Code"
+                >
+                  <span>Server</span>
+                  <FaGithub className="text-lg group-hover/link:rotate-12 transition-transform" />
+                </a>
+              </span>
+            ) : (
+              <a
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-gray-500 hover:text-white text-sm font-medium transition-colors group/link"
+              >
+                <span>Code</span>
+                <FaGithub className="text-lg group-hover/link:rotate-12 transition-transform" />
+              </a>
+            )}
           </div>
         </div>
       </div>

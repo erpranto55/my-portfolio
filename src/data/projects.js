@@ -1,5 +1,18 @@
 export const projectsData = [
   {
+    title: "Wanderlust",
+    desc: "A full-stack tourism management and booking platform. Features interactive travel guides, personalized booking dashboards, user reviews, and secure role-based access control.",
+    longDesc: "Wanderlust is a premium full-stack travel and tourism booking application. Built with React and Node.js/Express, it offers an immersive experience for travelers to browse popular destinations, book custom tour guides, and manage trip itineraries. The platform features role-based user, guide, and admin dashboards, secure JWT-based authentication, interactive reviews, and a robust payment structure. The backend utilizes MongoDB for flexible data persistence and clean RESTful API design.",
+    tags: ["React.js", "Node.js", "MongoDB", "Express"],
+    features: ["Role-based dashboards (User, Guide, Admin)", "Destination browsing & tour package selection", "Interactive guide booking system", "Reviews & rating system", "JWT-secured authentication & API endpoints", "Modern responsive web dashboard"],
+    image: "/wanderlust.png",
+    live: "https://wanderlust-ten-psi.vercel.app",
+    code: "https://github.com/erpranto55/Wanderlust",
+    serverCode: "https://github.com/erpranto55/Wanderlust-server",
+    category: "Full Stack",
+    accent: "neon-blue",
+  },
+  {
     title: "Medique",
     desc: "Medique is a full-stack doctor appointment and queue management platform where patients can register, browse available physicians, and book consultations by specialty and time slot. Features JWT authentication, digital session tokens, and a complete appointment management dashboard.",
     longDesc: "Medique is a comprehensive full-stack doctor appointment and queue management platform built with Next.js on the frontend and Node.js/Express on the backend. Patients can register, browse available physicians, and book consultations by specialty and time slot. The system generates unique digital session tokens for each confirmed booking, allowing patients and providers to manage scheduled sessions efficiently. The backend features robust JWT-based authentication, secure API endpoints, MongoDB data persistence, and a clean RESTful architecture.",

@@ -190,7 +190,7 @@ const Hero = () => {
 
                       {/* Option 3: Google Drive View */}
                       <a
-                        href="https://drive.google.com/file/d/1iPLwmepfv1GdrQxj7lcsOZZAvIlRDBpl/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1SpaogpUfDXWb7_DlbqZUsK_KzYtpVkPT/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setIsDropdownOpen(false)}
