@@ -1,5 +1,26 @@
 export const projectsData = [
   {
+    title: "StartupForge",
+    desc: "A modern full-stack startup collaboration platform. Features role-based dashboards, multi-step startup recruitment campaigns, Stripe subscription handling, and a robust hybrid authentication flow using Better Auth and custom JWTs.",
+    longDesc: "StartupForge is a premium team-building ecosystem for startups. Built using Next.js on the frontend and Express/Node.js on the backend, it serves as a startup collaboration platform where founders can publish startup ideas, pitch pitches, and recruit collaborators. It supports distinct dashboards for founders, collaborators, and admins. Security is handled via Better Auth and a custom JWT HTTPOnly cookie verification layer. Founders can post job opportunities (capped for free tier, unlimited for premium users), manage applications, and dynamically add collaborators to their startup's team directory, while admins oversee startups, users, and transactions powered by Stripe.",
+    tags: ["Next.js", "Express", "MongoDB", "Better Auth", "Stripe"],
+    features: [
+      "Role-based dashboards (Founder, Collaborator, Admin)",
+      "Startup pitch directory with admin review workflow",
+      "Multi-step job opportunity builder (capped for free, unlimited for premium)",
+      "Tabular application tracking (Acceptance automatically updates team directories)",
+      "Robust authentication via Better Auth (Credentials & Google Auth Linking)",
+      "Stripe payment integration for premium memberships",
+      "Custom JWT verification with HTTPOnly cookie persistence"
+    ],
+    image: "/startup_forge.png",
+    live: "https://startup-forge-nine.vercel.app",
+    code: "https://github.com/erpranto55/StartupForge",
+    serverCode: "https://github.com/erpranto55/StartupForge-server",
+    category: "Full Stack",
+    accent: "neon-blue",
+  },
+  {
     title: "Wanderlust",
     desc: "A full-stack tourism management and booking platform. Features interactive travel guides, personalized booking dashboards, user reviews, and secure role-based access control.",
     longDesc: "Wanderlust is a premium full-stack travel and tourism booking application. Built with React and Node.js/Express, it offers an immersive experience for travelers to browse popular destinations, book custom tour guides, and manage trip itineraries. The platform features role-based user, guide, and admin dashboards, secure JWT-based authentication, interactive reviews, and a robust payment structure. The backend utilizes MongoDB for flexible data persistence and clean RESTful API design.",
