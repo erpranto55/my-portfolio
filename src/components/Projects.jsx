@@ -9,7 +9,7 @@ import { FiExternalLink } from "react-icons/fi";
 import Link from 'next/link';
 import { projectsData } from '@/data/projects';
 
-// ─── Project Detail Modal ─────────────────────────────────────────────────────
+// ─── Project Detail Modal 
 const accentColors = {
   "neon-blue":   { text: "text-neon-blue",   border: "border-neon-blue/40",   bg: "bg-neon-blue/10",   glow: "shadow-[0_0_30px_rgba(0,210,255,0.25)]",   btn: "from-neon-blue to-blue-600",   dot: "#00d2ff" },
   "neon-pink":   { text: "text-neon-pink",   border: "border-neon-pink/40",   bg: "bg-neon-pink/10",   glow: "shadow-[0_0_30px_rgba(255,0,122,0.25)]",   btn: "from-neon-pink to-pink-600",   dot: "#ff007a" },
